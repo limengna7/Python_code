@@ -362,9 +362,9 @@ function hide_img(obj){
 </div>
 <div class='heading'>
 <h1>报告的title</h1>
-<p class='attribute'><strong>开始时间:</strong> 2019-08-30 12:00:19</p>
-<p class='attribute'><strong>耗时:</strong> 0:00:20.687503</p>
-<p class='attribute'><strong>状态:</strong> <span class="tj passCase">Pass</span>1</p>
+<p class='attribute'><strong>开始时间:</strong> 2019-08-30 17:46:35</p>
+<p class='attribute'><strong>耗时:</strong> 0:00:00.000733</p>
+<p class='attribute'><strong>状态:</strong> <span class="tj errorCase">Error</span>1</p>
 
 <p class='description'>执行case的结果</p>
 </div>
@@ -397,33 +397,43 @@ function hide_img(obj){
     <th>错误截图</th>
 </tr>
 
-<tr class='passClass'>
-    <td>case.test_add_bug.Test_CR</td>
-    <td>1</td>
+<tr class='errorClass'>
+    <td>unittest.loader._FailedTest</td>
     <td>1</td>
     <td>0</td>
     <td>0</td>
+    <td>1</td>
     <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
     <td>&nbsp;</td>
 </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
-    <td ><div class='testcase'>test01</div></td>
+<tr id='ft1.1' class='none'>
+    <td ><div class='testcase'>test_add_bug</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <span class='status passCase'>
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
-        通过</a></span>
+    <span class='status errorCase'>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        错误</a></span>
 
-    <div id='div_pt1.1' class="popup_window">
+    <div id='div_ft1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.1: True
+ft1.1: ImportError: Failed to import test module: case.test_add_bug
+Traceback (most recent call last):
+  File "C:\Users\LMN\AppData\Local\Programs\Python\Python36\lib\unittest\loader.py", line 428, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Users\LMN\AppData\Local\Programs\Python\Python36\lib\unittest\loader.py", line 369, in _get_module_from_name
+    __import__(name)
+  File "C:\soft\github\Web_Auto\case\test_add_bug.py", line 12
+    cls.driver.maximize_window()
+                               ^
+TabError: inconsistent use of tabs and spaces in indentation
+
 
 
         </pre>
@@ -437,16 +447,16 @@ pt1.1: True
 <tr id='total_row'>
     <th>统计</th>
     <th>1</th>
+    <th>0</th>
+    <th>0</th>
     <th>1</th>
-    <th>0</th>
-    <th>0</th>
     <th>&nbsp;</th>
     <th>&nbsp;</th>
 </tr>
 </table>
 <script>
     showCase(1);
-    drawCircle(1, 0, 0);
+    drawCircle(0, 0, 1);
 </script>
 
 <div id='ending'>&nbsp;</div>
