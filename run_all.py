@@ -1,12 +1,12 @@
 from common import HTMLTestRunner_cn
 import unittest
 
-casepath = "C:\\soft\\github\\Web_Auto\\"
+casepath = "C:\\soft\\ruiruibenji\\workspace\\auto\\"
 rule = "test*.py"
 discover = unittest.defaultTestLoader.discover(start_dir=casepath, pattern=rule)
 print(discover)
 
-reportpath = "C:\\soft\\github\\Web_Auto\\report\\"+"report.html"
+reportpath = "C:\\soft\\ruiruibenji\\workspace\\auto\\report\\"+"report.html"
 fp = open(reportpath, "wb")
 
 runner = HTMLTestRunner_cn.HTMLTestRunner(stream=fp,
