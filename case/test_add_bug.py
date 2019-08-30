@@ -9,7 +9,9 @@ class Test_CR(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver = webdriver.Firefox()
+		cls.driver.maximize_window()
         LogInPage(cls.driver).log_in_page("admin", "123456")
+		time.sleep(2)
         cls.a = AddBug(cls.driver)
 
     def test01(self):
